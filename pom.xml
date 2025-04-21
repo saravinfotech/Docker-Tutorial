@@ -48,6 +48,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.5</version>
+				<configuration>
+					<to>spring-docker:5.0</to>
+					<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+				</configuration>
+			</plugin>
 		</plugins>
 		<finalName>spring-docker</finalName>
 	</build>
